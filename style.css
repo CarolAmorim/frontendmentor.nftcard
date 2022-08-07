@@ -1,0 +1,159 @@
+:root {
+  /* Typography */
+  font-family: "Outfit", Arial, sans-serif;
+
+  /* Font size (paragraph): */
+  --size: 1.125rem;
+
+  /* Colors */
+
+  /* Primary */
+  --p1: hsl(215, 43%, 69%);
+  --p2: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --n1: hsl(217, 54%, 11%); /* Very dark blue (main BG) */
+  --n2: hsl(216, 50%, 16%); /* Very dark blue (card BG) */
+  --n3: hsl(215, 32%, 27%); /* Very dark blue (line) */
+  --n4: hsl(0, 0%, 100%);
+}
+
+/* reset */
+body,
+main,
+div,
+h1,
+p,
+figure {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: var(--n1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: var(--n2);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  width: 300px;
+}
+
+.picture {
+  margin-bottom: 1.25rem;
+  border-radius: 0.625rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture img:first-child {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+}
+
+.picture img:last-child {
+  display: none;
+}
+
+.picture:hover img:last-child {
+  display: block;
+  position: absolute;
+}
+
+h1,
+span {
+  color: var(--n4);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1:hover {
+  cursor: pointer;
+  color: var(--p2);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--p1);
+}
+
+main > p {
+  font-weight: 300;
+  margin-bottom: 16px;
+  font-size: var(--size);
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--n3);
+  margin-bottom: 1rem;
+}
+
+.detail p {
+  font-weight: 400;
+  position: relative;
+}
+
+.detail p:nth-child(1) {
+  color: var(--p2);
+  left: 1rem;
+}
+
+.detail p:nth-child(1)::before {
+  content: "";
+  background: url("img/icon-ethereum.svg") no-repeat;
+  position: absolute;
+  width: 0.6875rem;
+  height: 1.125rem;
+  left: -1rem;
+  top: 0.125rem;
+}
+
+.detail p:nth-child(2)::before {
+  content: "";
+  background: url("img/icon-clock.svg") no-repeat;
+  position: absolute;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  left: -1.5rem;
+  top: 0.1875rem;
+}
+
+.credits {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.credits img {
+  border: 1px solid var(--n4);
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+
+.credits p {
+  font-weight: 300;
+}
+
+.credits p:hover {
+  cursor: pointer;
+}
+.credits p:hover span {
+  color: var(--p2);
+}
