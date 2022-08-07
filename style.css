@@ -46,7 +46,7 @@ main {
 }
 
 .picture {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   border-radius: 0.625rem;
 
   display: flex;
@@ -75,7 +75,7 @@ span {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -92,14 +92,14 @@ p {
 
 main > p {
   font-weight: 300;
-  margin-bottom: 16px;
+  margin-bottom: 1.5rem;
   font-size: var(--size);
 }
 
 .detail {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--n3);
   margin-bottom: 1rem;
 }
@@ -138,6 +138,7 @@ main > p {
   display: flex;
   gap: 14px;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .credits img {
